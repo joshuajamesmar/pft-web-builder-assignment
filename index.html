@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marci Metzger Homes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/98c2bbfb84.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Db6hVTPOy3pm6DoXt87w0N_YFYU7nkw&callback=initMap" defer></script>
+  <script src="script.js"></script>
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 relative">
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed inset-y-0 left-0 w-128 bg-gray-100 shadow transform -translate-x-full transition-transform duration-300 z-50">
+    <nav class="mt-4 px-20 py-20 space-y-8 font-['Roboto']">
+      <a href="#home" class="block font-bold text-gray-800" onclick="toggleSidebar()">HOME</a>
+      <a href="#listings" class="block text-gray-600 hover:text-black" onclick="toggleSidebar()">LISTINGS</a>
+      <a href="#move" class="block text-gray-600 hover:text-black" onclick="toggleSidebar()">LET'S MOVE</a>
+      <a href="#about" class="block text-gray-600 hover:text-black" onclick="toggleSidebar()">ABOUT US</a>
+    </nav>
+  </div>
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40" onclick="toggleSidebar()"></div>
+
+  <!-- Navbar -->
+  <header class="relative z-30 bg-white shadow-md">
+    <div class="flex items-center justify-between px-4 py-6 sm:px-8">
+      <div class="flex-1 flex justify-start pl-4 sm:pl-24">
+        <div class="text-xl sm:text-2xl font-semibold cursor-pointer" onclick="toggleSidebar()">
+          <i class="fas fa-bars h-5 w-5 sm:h-6 sm:w-6 custom-text-color"></i>
+        </div>
+      </div>
+      <div class="flex-shrink-0 flex justify-center items-center px-2">
+        <img class="h-12 sm:h-[127px] w-auto max-w-[200px] sm:max-w-[496px]" src="images/MarciMetzger-logo.jpg" alt="Logo">
+      </div>
+      <div class="flex-1 flex justify-end pr-4 sm:pr-12 opacity-0">
+        <i class="fas fa-bars h-5 w-5 sm:h-6 sm:w-6 text-black"></i>
+      </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-40">
+      <div class="w-9 h-9 bg-white rotate-45"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative parallax h-[830px] flex flex-col justify-center items-center text-white">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 text-center pb-20 px-4">
+      <p class="uppercase mb-6 text-2xl tracking-wide font-['Calibri']">Marci Metzger - The Ridge Realty Group</p>
+      <h2 class="text-5xl md:text-6xl mt-2 font-['Cinzel']">PAHRUMP REALTOR</h2>
+      <button class="mt-6 px-11 py-4 bg-white text-black font-semibold font-['Roboto'] rounded-full hover:bg-gray-200 transition">
+        CALL NOW
+      </button>
+    </div>
+  </section>
+
+  <!-- Marci Metzger -->
+  <section id="listings" class="py-24 px-6 custom-bg text-center">
+    <div class="relative flex flex-col items-center space-y-8">
+     <h2 class="text-4xl text-white mb-6 font-['Cinzel']">MARCI METZGER</h2>
+     <img class="rounded-full" src="images/marci-metzger.jpg" alt="">
+     <h3 class="text-white text-2xl font-['Calibri']">REALTOR FOR NEARLY 3 DECADES!</h3>
+     <h3 class="text-white text-2xl font-bold font-['Calibri']">206-919-6886</h3>
+    </div>
+  </section>
+
+  <!-- GET IT SOLD Section -->
+  <section class="text-center py-10 font-['Roboto'] mb-12">
+  <h2 class="text-4xl font-['Cinzel'] mb-10 px-4 mt-6">GET IT SOLD</h2>
+  <div class="space-y-16 px-4 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center text-left gap-6">
+      <img src="./images/kitchen.jpg" alt="Kitchen" class="w-full md:w-1/2 rounded">
+      <div class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0">
+        <h4 class="text-2xl mb-6">Top Residential Sales Last 5 Years</h4>
+        <p class="text-lg">
+          We helped nearly 90 clients in 2021, and closed 28.5 million in sales! <br>
+          Our team works hard every day to grow and learn, so that we may continue to excel in our market. 
+          Our clients deserve our best, & we want to make sure our best is better every year.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center text-left gap-6">
+      <div class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0 order-2 md:order-1">
+        <h4 class="text-2xl mb-6">Don't Just List It...</h4>
+        <p class="text-lg">
+          Get it SOLD! We exhaust every avenue to ensure our listings are at the fingertips of every possible buyer, 
+          getting you top dollar for your home.
+        </p>
+      </div>
+      <img src="./images/poolhouse.jpg" alt="Listing" class="w-full md:w-1/2 rounded order-1 md:order-2">
+    </div>
+    <div class="flex flex-col md:flex-row items-center text-left gap-6">
+      <img src="./images/key.jpg" alt="Key" class="w-full md:w-1/2 rounded">
+      <div class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0">
+        <h4 class="text-2xl mb-6">Guide to Buyers</h4>
+        <p class="text-lg">
+          Nobody knows the market like we do. Enjoy having a pro at your service. Market analysis, 
+          upgrades lists, contractors on speed dial, & more!
+        </p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Search Listings Section -->
+  <section class="bg-black bg-opacity-10 py-10 dreamhomebg">
+    <h3 class="text-center text-white text-4xl p-8 font-['Cinzel'] text-shadow">FIND YOUR DREAM HOME</h3>
+    <div class="max-w-7xl mx-auto mb-10 bg-white p-6 md:p-10 rounded shadow">
+      <h3 class="custom-text-color text-3xl mb-6 font-['Cinzel']">SEARCH LISTING</h3>
+      <div class="text-[#4b2e2e] font-['Roboto']">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm mb-6">
+          <div class="flex flex-col">
+            <label class="mb-1">Location</label>
+            <select class="border p-2 rounded">
+              <option disabled selected></option>
+            </select>
+          </div>
+          <div class="flex flex-col">
+            <label class="mb-1">Type</label>
+            <select class="border p-2 rounded">
+              <option disabled selected></option>
+            </select>
+          </div>
+          <div class="flex flex-col">
+            <label class="mb-1">Sort By</label>
+            <select class="border p-2 rounded">
+              <option selected></option>
+              <option>Newest</option>
+              <option>Oldest</option>
+              <option>Least Expensive to Most</option>
+              <option>Most Expensive to Least</option>
+              <option>Bedrooms (Low to High)</option>
+              <option>Bedrooms (High to Low)</option>
+              <option>Bathrooms (Low to High)</option>
+              <option>Bathrooms (High to Low)</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 text-sm items-end">
+          <div class="flex flex-col md:col-span-2">
+            <label class="mb-1">Bedrooms</label>
+            <select class="border p-2 rounded">
+              <option selected>Any Number</option>
+              <option>Studio</option>
+              <option>+1</option>
+              <option>+2</option>
+              <option>+3</option>
+              <option>+4</option>
+              <option>+5</option>
+              <option>+6</option>
+            </select>
+          </div>
+          <div class="flex flex-col md:col-span-2">
+            <label class="mb-1">Baths</label>
+            <select class="border p-2 rounded">
+              <option selected>Any Number</option>
+              <option>+1</option>
+              <option>+2</option>
+              <option>+3</option>
+              <option>+4</option>
+              <option>+5</option>
+              <option>+6</option>
+            </select>
+          </div>
+          <div class="flex flex-col md:col-span-2">
+            <label class="mb-1">Min Price</label>
+            <input type="text" class="border p-2 rounded">
+          </div>
+          <div class="flex flex-col md:col-span-2">
+            <label class="mb-1">Max Price</label>
+            <input type="text" class="border p-2 rounded">
+          </div>
+          <div class="flex flex-col md:col-span-4">
+            <button class="bg-gray-200 text-gray-500 px-4 py-2 rounded-full w-full mt-[22px] cursor-not-allowed" disabled>
+              SEARCH NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Logos -->
+  <section class="bg-white px-6 py-12 md:px-24 md:py-24 mx-auto">
+  <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-6 sm:gap-x-10 md:gap-x-16">
+    <img src="/images/company-logos/company1.jpg" alt="Company 1" class="h-16 md:h-24 object-contain">
+    <img src="/images/company-logos/company2.jpg" alt="Company 2" class="h-16 md:h-24 object-contain">
+    <img src="/images/company-logos/company3.jpg" alt="Company 3" class="h-16 md:h-24 object-contain">
+    <img src="/images/company-logos/company4.jpg" alt="Company 4" class="h-16 md:h-24 object-contain">
+  </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="bg-black py-10 text-white">
+  <h3 class="text-center mb-6 text-xl sm:text-2xl font-serif">PHOTO GALLERY</h3>
+  <div class="flex justify-center px-4">
+    <img id="mainImage" 
+         src="/images/gallery/gallery1.jpg" 
+         alt="Gallery Image" 
+         class="w-full max-w-full sm:max-w-2xl lg:max-w-4xl transition-all duration-500 rounded-md shadow-lg object-contain">
+  </div>
+  <div id="thumbnails" class="flex justify-center mt-6 gap-2 overflow-x-auto px-4">
+    <img src="/images/gallery/gallery1.jpg" alt="thumb1" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover border-2 border-white cursor-pointer">
+    <img src="/images/gallery/gallery2.jpg" alt="thumb2" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+    <img src="/images/gallery/gallery3.jpg" alt="thumb3" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+    <img src="/images/gallery/gallery4.jpg" alt="thumb4" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+    <img src="/images/gallery/gallery5.jpg" alt="thumb5" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+    <img src="/images/gallery/gallery6.jpg" alt="thumb6" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+    <img src="/images/gallery/gallery7.jpg" alt="thumb7" class="thumb w-16 sm:w-20 h-14 sm:h-16 object-cover opacity-50 hover:opacity-100 cursor-pointer">
+  </div>
+  </section>
+
+  <!-- Our Services -->
+  <section class="p-16">
+      <h3 class="text-center text-4xl mb-6 p-10 custom-text-color font-['Cinzel']">OUR SERVICES</h3>
+      <div class="flex flex-col md:flex-row justify-center gap-6 px-4 font-['Roboto']">
+          <div class="text-center max-w-xs mr-12">
+              <img src="/images/services/services1.jpg" class="rounded-full mx-auto mb-2" />
+              <h4 class="text-2xl p-5">Real Estate Done Right</h4>
+              <p class="text-lg">Worried about your property decisions? Don't be. We ensure you get the best experience possible!</p>
+          </div>
+          <div class="text-center max-w-xs mr-12 ml-12">
+              <img src="/images/services/services2.jpg" class="rounded-full mx-auto mb-2" />
+              <h4 class="text-2xl p-5">Commercial & Residential</h4>
+              <p class="text-lg">Large or small, condo or mansion, we can find it and get it for you at the price that's right.</p>
+          </div>
+          <div class="text-center max-w-xs ml-12">
+              <img src="/images/services/services3.jpg" class="rounded-full mx-auto mb-2" />
+              <h4 class="text-2xl p-5">Rely on Expertise</h4>
+              <p class="text-lg">If you have questions about affordability, credit, or legal matters, trust us to help you feel confident.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Social Medias -->
+  <section class="bg-black text-white">
+    <div class="flex justify-center space-x-6 p-20 text-4xl">
+      <a href="https://www.facebook.com/MarciHomes/" target="_blank"><i class="fab fa-facebook p-6"></i></a>
+      <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank"><i class="fab fa-instagram p-6"></i></a>
+      <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank"><i class="fab fa-linkedin p-6"></i></a>
+      <a href="https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump" target="_blank"><i class="fab fa-yelp p-6"></i></a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="bg-white p-20 mb-20">
+    <h3 class="text-center text-2xl md:text-3xl font-['Cinzel'] text-[#b79995] mb-20 tracking-wide">CALL OR VISIT</h3>
+    <div class="max-w-7xl mx-auto px-4 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-start font-['Roboto']">
+      <form class="space-y-4">
+        <h4 class="text-xl font-semibold mb-2">Send Message</h4>
+        <input type="text" placeholder="Name" class="border-b w-full p-4 focus:outline-none" />
+        <input type="email" placeholder="Email*" class="border-b w-full p-4 focus:outline-none" />
+        <textarea placeholder="Message" rows="4" class="border-b w-full p-4 focus:outline-none"></textarea>
+        <div class="flex justify-center">
+          <button type="submit" class="bg-gray-200 text-black text-sm font-semibold py-5 px-6 rounded-full w-32 hover:bg-gray-300">
+            SEND
+          </button>
+        </div>
+        <p class="text-xs text-gray-500">
+          This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+        </p>
+      </form>
+      <div class="space-y-4 text-sm md:text-base">
+        <a href="https://api.whatsapp.com/send/?phone=14259412560&text&type=phone_number&app_absent=0" target="_blank" class="inline-flex items-center gap-2 bg-[#3c4f51] font-bold text-white px-8 py-4 rounded-full hover:bg-[#2c3b3d] w-fit">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
+          Message us on WhatsApp
+        </a>
+        <div class="mx-auto p-2">
+          <p class="text-xl mx-auto">Marci Metzger - THE RIDGE REALTY GROUP</p>
+          <p class="mt-6 mb-6">3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+          <p class="text-[#b79995] mx-auto">(206) 919-6886</p>
+        </div>
+        <div class="mx-auto p-2">
+          <p class="text-xl mx-auto">Office Hours</p>
+          <div class="flex items-center justify-between cursor-pointer mt-6" onclick="toggleHours()">
+            <p class="flex items-center gap-2">
+              Open today 
+              <span class="font-medium inline-flex items-center gap-1">
+                08:00 a.m. – 07:00 p.m.
+                <span id="arrow" class="text-lg transition-transform duration-300">&#9654;</span>
+              </span>
+            </p>
+          </div>
+          <ul id="officeHours" class="space-y-1 hidden">
+            <li>Mon <span>08:00 a.m. – 07:00 p.m.</span></li>
+            <li>Tue <span>08:00 a.m. – 07:00 p.m.</span></li>
+            <li>Wed <span>08:00 a.m. – 07:00 p.m.</span></li>
+            <li>Thu <span>08:00 a.m. – 07:00 p.m.</span></li>
+            <li><strong>Fri</strong> <span class="font-bold">08:00 a.m. – 07:00 p.m.</span></li>
+            <li>Sat <span>08:00 a.m. – 07:00 p.m.</span></li>
+            <li>Sun <span>08:00 a.m. – 07:00 p.m.</span></li>
+          </ul>
+          <p class="mt-6">Open daily <span class="font-medium ml-5">8:00 a.m. – 7:00 p.m.</span></p>
+          <p class="mt-8 text-sm">Appointments outside office hours available upon request. Just call!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maps Section -->
+  <div id="map" class=" shadow-lg"></div>
+
+  <!-- Decorative Triangle Merged into Footer -->
+  <div class="relative w-full">
+  <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-40">
+    <div class="w-9 h-9 bg-black rotate-45"></div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-4">
+  <div class="flex justify-center space-x-6 p-9">
+    <a href="https://www.facebook.com/MarciHomes/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump" target="_blank"><i class="fab fa-yelp"></i></a>
+  </div>
+  <div>
+    <p class="font-['Roboto'] text-xs">COPYRIGHT © 2023 MARCI METZGER HOMES - ALL RIGHTS RESERVED</p>
+  </div>
+  <div class="flex justify-center mt-4 mb-12 p-5">
+    <div class="w-16 h-px bg-gray-400"></div>
+  </div>
+  </footer>
+</body>
+</html>

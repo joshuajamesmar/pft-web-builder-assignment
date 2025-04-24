@@ -1,0 +1,63 @@
+  /* General Styles */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  .custom-font-size {
+    font-size: 16px;
+  }
+  
+  /* Custom Background Color */
+  .custom-bg {
+    background-color: #161616;
+  }
+
+  .custom-text-color {
+    color: #be8585;
+  }
+  
+  /* Parallax Section */
+  .parallax {
+    background-image: url('images/mtn-falls-pond.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Dream Home Section */
+  .dreamhomebg {
+    background-image: url('images/dreamhome-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* map css */
+  #map {
+    width: 100%;
+    height: 600px;
+  }
+
+  /* Footer Icons */
+  .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #1da1f2; /* Twitter blue */
+  }
+  
