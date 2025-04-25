@@ -244,58 +244,64 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="bg-white p-20 mb-20">
-    <h3 class="text-center text-2xl md:text-3xl font-['Cinzel'] text-[#b79995] mb-20 tracking-wide">CALL OR VISIT</h3>
-    <div class="max-w-7xl mx-auto px-4 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-start font-['Roboto']">
-      <form class="space-y-4">
-        <h4 class="text-xl font-semibold mb-2">Send Message</h4>
-        <input type="text" placeholder="Name" class="border-b w-full p-4 focus:outline-none" />
-        <input type="email" placeholder="Email*" class="border-b w-full p-4 focus:outline-none" />
-        <textarea placeholder="Message" rows="4" class="border-b w-full p-4 focus:outline-none"></textarea>
-        <div class="flex justify-center">
-          <button type="submit" class="bg-gray-200 text-black text-sm font-semibold py-5 px-6 rounded-full w-32 hover:bg-gray-300">
-            SEND
-          </button>
+  <section class="bg-white px-4 sm:px-6 md:px-20 py-20 mb-20">
+  <h3 class="text-center text-2xl md:text-3xl font-['Cinzel'] text-[#b79995] mb-16 tracking-wide">
+    CALL OR VISIT
+  </h3>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start font-['Roboto']">
+    <form class="space-y-6 w-full">
+      <h4 class="text-xl font-semibold mb-2">Send Message</h4>
+      <input type="text" placeholder="Name" class="border-b w-full p-4 focus:outline-none" />
+      <input type="email" placeholder="Email*" class="border-b w-full p-4 focus:outline-none" />
+      <textarea placeholder="Message" rows="4" class="border-b w-full p-4 focus:outline-none"></textarea>
+
+      <div class="flex justify-center">
+        <button type="submit" class="bg-gray-200 text-black text-sm font-semibold py-5 px-6 rounded-full w-32 hover:bg-gray-300">
+          SEND
+        </button>
+      </div>
+
+      <p class="text-xs text-gray-500">
+        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+      </p>
+    </form>
+    <div class="space-y-6 text-sm md:text-base w-full">
+      <a href="https://api.whatsapp.com/send/?phone=14259412560&text&type=phone_number&app_absent=0"
+         target="_blank"
+         class="inline-flex items-center gap-2 bg-[#3c4f51] font-bold text-white px-8 py-4 rounded-full hover:bg-[#2c3b3d] w-fit">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
+        Message us on WhatsApp
+      </a>
+      <div class="p-2">
+        <p class="text-xl">Marci Metzger - THE RIDGE REALTY GROUP</p>
+        <p class="mt-6 mb-6">3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+        <p class="text-[#b79995] text-base">(206) 919-6886</p>
+      </div>
+      <div class="p-2">
+        <p class="text-xl">Office Hours</p>
+        <div class="flex items-center justify-between cursor-pointer mt-6" onclick="toggleHours()">
+          <p class="flex items-center gap-2">
+            Open today 
+            <span class="font-medium inline-flex items-center gap-1">
+              08:00 a.m. – 07:00 p.m.
+              <span id="arrow" class="text-lg transition-transform duration-300">&#9654;</span>
+            </span>
+          </p>
         </div>
-        <p class="text-xs text-gray-500">
-          This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
-        </p>
-      </form>
-      <div class="space-y-4 text-sm md:text-base">
-        <a href="https://api.whatsapp.com/send/?phone=14259412560&text&type=phone_number&app_absent=0" target="_blank" class="inline-flex items-center gap-2 bg-[#3c4f51] font-bold text-white px-8 py-4 rounded-full hover:bg-[#2c3b3d] w-fit">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6">
-          Message us on WhatsApp
-        </a>
-        <div class="mx-auto p-2">
-          <p class="text-xl mx-auto">Marci Metzger - THE RIDGE REALTY GROUP</p>
-          <p class="mt-6 mb-6">3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
-          <p class="text-[#b79995] mx-auto">(206) 919-6886</p>
-        </div>
-        <div class="mx-auto p-2">
-          <p class="text-xl mx-auto">Office Hours</p>
-          <div class="flex items-center justify-between cursor-pointer mt-6" onclick="toggleHours()">
-            <p class="flex items-center gap-2">
-              Open today 
-              <span class="font-medium inline-flex items-center gap-1">
-                08:00 a.m. – 07:00 p.m.
-                <span id="arrow" class="text-lg transition-transform duration-300">&#9654;</span>
-              </span>
-            </p>
-          </div>
-          <ul id="officeHours" class="space-y-1 hidden">
-            <li>Mon <span>08:00 a.m. – 07:00 p.m.</span></li>
-            <li>Tue <span>08:00 a.m. – 07:00 p.m.</span></li>
-            <li>Wed <span>08:00 a.m. – 07:00 p.m.</span></li>
-            <li>Thu <span>08:00 a.m. – 07:00 p.m.</span></li>
-            <li><strong>Fri</strong> <span class="font-bold">08:00 a.m. – 07:00 p.m.</span></li>
-            <li>Sat <span>08:00 a.m. – 07:00 p.m.</span></li>
-            <li>Sun <span>08:00 a.m. – 07:00 p.m.</span></li>
-          </ul>
-          <p class="mt-6">Open daily <span class="font-medium ml-5">8:00 a.m. – 7:00 p.m.</span></p>
-          <p class="mt-8 text-sm">Appointments outside office hours available upon request. Just call!</p>
-        </div>
+        <ul id="officeHours" class="space-y-1 hidden">
+          <li>Mon <span>08:00 a.m. – 07:00 p.m.</span></li>
+          <li>Tue <span>08:00 a.m. – 07:00 p.m.</span></li>
+          <li>Wed <span>08:00 a.m. – 07:00 p.m.</span></li>
+          <li>Thu <span>08:00 a.m. – 07:00 p.m.</span></li>
+          <li><strong>Fri</strong> <span class="font-bold">08:00 a.m. – 07:00 p.m.</span></li>
+          <li>Sat <span>08:00 a.m. – 07:00 p.m.</span></li>
+          <li>Sun <span>08:00 a.m. – 07:00 p.m.</span></li>
+        </ul>
+        <p class="mt-6">Open daily <span class="font-medium ml-5">8:00 a.m. – 7:00 p.m.</span></p>
+        <p class="mt-8 text-sm">Appointments outside office hours available upon request. Just call!</p>
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Maps Section -->
