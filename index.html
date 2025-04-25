@@ -13,7 +13,7 @@
 </head>
 <body class="bg-white text-gray-800 relative">
   <!-- Sidebar -->
-  <div id="sidebar" class="fixed inset-y-0 left-0 w-128 bg-gray-100 shadow transform -translate-x-full transition-transform duration-300 z-50">
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-[60]">
     <nav class="mt-4 px-20 py-20 space-y-8 font-['Roboto']">
       <a href="#home" class="block font-bold text-gray-800" onclick="toggleSidebar()">HOME</a>
       <a href="#listings" class="block text-gray-600 hover:text-black" onclick="toggleSidebar()">LISTINGS</a>
@@ -21,7 +21,7 @@
       <a href="#about" class="block text-gray-600 hover:text-black" onclick="toggleSidebar()">ABOUT US</a>
     </nav>
   </div>
-  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-40" onclick="toggleSidebar()"></div>
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-[55]" onclick="toggleSidebar()"></div>
 
   <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
