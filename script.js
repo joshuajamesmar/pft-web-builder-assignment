@@ -18,7 +18,7 @@ function toggleHours() {
 // Google Maps API
 function initMap() {
     // Coordinates
-    const location = { lat: 14.6586, lng: 121.0327 };
+    const location = { lat: 36.1844, lng: -115.9553 };
   
     const map = new google.maps.Map(document.getElementById("map"), {
       center: location,
