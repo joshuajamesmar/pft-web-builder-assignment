@@ -24,6 +24,47 @@ body {
   color: #523b35;
 }
 
+.custom-text-color {
+  color: #333;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced transitions */
+#sidebar {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#overlay {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#diamond {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease-in-out;
+}
+
+/* Link hover effect */
+nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+nav a:not(.font-bold):hover::before {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
 /* Parallax Section */
 .parallax {
   background-image: url("images/mtn-falls-pond.jpg");
@@ -31,6 +72,80 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.hero-content {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.elegant-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.elegant-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.elegant-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.elegant-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.elegant-button:active {
+  transform: translateY(0);
+}
+
+.text-shadow-elegant {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, white, transparent);
+  margin: 0 auto;
+}
+
+.overlay-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
 }
 
 /* Dream Home Section */

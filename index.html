@@ -4,120 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marci Metzger Homes - Real Estate Agent, Real Estate, Realtor</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/98c2bbfb84.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/98c2bbfb84.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Db6hVTPOy3pm6DoXt87w0N_YFYU7nkw&callback=initMap"
-      defer
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7Db6hVTPOy3pm6DoXt87w0N_YFYU7nkw&callback=initMap" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <script src="script.js"></script>
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body class="bg-white text-gray-800 relative">
-    <!-- Sidebar -->
-    <div
-      id="sidebar"
-      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-[60]"
-    >
-      <nav class="mt-4 px-20 py-20 space-y-8 font-['Roboto']">
-        <a
-          href="#home"
-          class="block font-bold text-gray-800"
-          onclick="toggleSidebar()"
-          >HOME</a
-        >
-        <a
-          href="#listings"
-          class="block text-gray-600 hover:text-black"
-          onclick="toggleSidebar()"
-          >LISTINGS</a
-        >
-        <a
-          href="#move"
-          class="block text-gray-600 hover:text-black"
-          onclick="toggleSidebar()"
-          >LET'S MOVE</a
-        >
-        <a
-          href="#about"
-          class="block text-gray-600 hover:text-black"
-          onclick="toggleSidebar()"
-          >ABOUT US</a
-        >
-      </nav>
-    </div>
-    <div
-      id="overlay"
-      class="fixed inset-0 bg-black bg-opacity-50 hidden z-[55]"
-      onclick="toggleSidebar()"
-    ></div>
-
-    <!-- Navbar -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-      <div class="flex items-center justify-between px-4 py-6 sm:px-8">
-        <div class="flex-1 flex justify-start pl-4 sm:pl-24">
-          <div
-            class="text-xl sm:text-2xl font-semibold cursor-pointer"
-            onclick="toggleSidebar()"
-          >
-            <i class="fas fa-bars h-5 w-5 sm:h-6 sm:w-6 custom-text-color"></i>
-          </div>
-        </div>
-        <div class="flex-shrink-0 flex justify-center items-center px-2">
-          <img
-            class="h-12 sm:h-[127px] w-auto max-w-[200px] sm:max-w-[496px]"
-            src="images/logo.png"
-            alt="Logo"
-          />
-        </div>
-        <div class="flex-1 flex justify-end pr-4 sm:pr-12 opacity-0">
-          <i class="fas fa-bars h-5 w-5 sm:h-6 sm:w-6 text-black"></i>
-        </div>
-      </div>
-      <div
-        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-40"
+  <!-- Sidebar -->
+  <div
+    id="sidebar"
+    class="fixed top-0 left-0 h-full w-64 sm:w-72 md:w-80 bg-white shadow-2xl transform -translate-x-full z-[60]"
+  >
+    <!-- Close Button -->
+    <div class="flex justify-end p-4">
+      <button
+        onclick="toggleSidebar()"
+        class="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+        aria-label="Close menu"
       >
-        <div class="w-9 h-9 bg-white rotate-45"></div>
+        <i class="fas fa-times text-gray-600 text-xl"></i>
+      </button>
+    </div>
+    
+    <nav class="px-6 sm:px-8 md:px-10 py-8 sm:py-12 md:py-16 space-y-6 sm:space-y-8 font-['Roboto']">
+      <a
+        href="#home"
+        class="block font-bold text-gray-800 text-sm sm:text-base md:text-lg"
+        onclick="toggleSidebar()"
+      >HOME</a>
+      <a
+        href="#listings"
+        class="block text-gray-600 hover:text-black text-sm sm:text-base md:text-lg"
+        onclick="toggleSidebar()"
+      >LISTINGS</a>
+      <a
+        href="#move"
+        class="block text-gray-600 hover:text-black text-sm sm:text-base md:text-lg"
+        onclick="toggleSidebar()"
+      >LET'S MOVE</a>
+      <a
+        href="#about"
+        class="block text-gray-600 hover:text-black text-sm sm:text-base md:text-lg"
+        onclick="toggleSidebar()"
+      >ABOUT US</a>
+    </nav>
+  </div>
+
+  <!-- Overlay -->
+  <div
+    id="overlay"
+    class="fixed inset-0 bg-black opacity-0 pointer-events-none z-[55]"
+    onclick="toggleSidebar()"
+  ></div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-shadow duration-300">
+    <div 
+    class="flex items-center justify-between px-3 py-4 sm:px-4 sm:py-6 md:px-8 md:py-6">
+      <!-- Menu Button -->
+      <div 
+      class="flex-1 flex justify-start pl-2 sm:pl-4 md:pl-12 lg:pl-24"
+      >
+        <div
+          class="text-lg sm:text-xl md:text-2xl font-semibold cursor-pointer p-1.5 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          onclick="toggleSidebar()"
+        >
+          <i 
+          class="fas fa-bars h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 custom-text-color"
+          ></i>
+        </div>
       </div>
-    </header>
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex justify-center items-center px-2">
+        <img
+          class="h-10 sm:h-12 md:h-20 lg:h-[127px] w-auto max-w-[150px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-[496px]"
+          src="images/logo.png"
+          alt="Logo"
+        />
+      </div>
+      <!-- Spacer for alignment -->
+      <div 
+      class="flex-1 flex justify-end pr-2 sm:pr-4 md:pr-12 opacity-0"
+      >
+        <i 
+        class="fas fa-bars h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-black"
+        ></i>
+      </div>
+    </div>
+
+    <!-- Sliding Diamond - Slides upward when scrolling -->
+    <div
+      id="diamond"
+      class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 -z-10 opacity-100 w-7 h-7 sm:w-4 sm:h-4 md:w-11 md:h-11"
+    >
+      <div class="w-full h-full sm:w-4 sm:h-4 md:w-11 md:h-11 bg-white rotate-45"></div>
+    </div>
+  </header>
 
     <!-- Hero Section -->
     <section
-      id="home"
-      class="relative parallax h-[830px] flex flex-col justify-center items-center text-white"
+      class="relative parallax min-h-screen flex flex-col justify-center items-center text-white"
     >
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div class="relative z-10 text-center pb-20 px-4">
-        <p class="uppercase mb-6 text-2xl tracking-wide font-['Calibri']">
-          MARCI METZGER - THE RIDGE REALTY GROUP
-        </p>
-        <h2 class="text-5xl md:text-6xl mt-2 font-['Cinzel']">
-          Pahrump Realtor
-        </h2>
-        <button
-          class="mt-6 px-11 py-4 bg-white text-black font-semibold font-['Roboto'] rounded-full hover:bg-gray-200 transition"
+      <div class="absolute inset-0 overlay-gradient absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl hero-content"
+      >
+        <p
+          class="text-sm sm:text-base md:text-lg tracking-[0.2em] font-lighttext-shadow-elegant"
+          style="font-family: 'Cinzel', sans-serif; letter-spacing: 0.25em"
         >
-          CALL NOW
+          MARCI METZGER
+        </p>
+        <div class="divider mb-6"></div>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-6 text-shadow-elegant leading-tight"
+          style="font-family: 'Cinzel', serif"
+        >
+          Pahrump Realtor
+        </h1>
+        <p
+          class="text-base sm:text-lg md:text-xl font-light mb-10 text-gray-200 max-w-2xl mx-auto"
+          style="font-family: 'Cormorant Garamond', serif"
+        >
+          The Ridge Realty Group
+        </p>
+        <button
+          class="elegant-button mt-4 px-10 sm:px-12 py-3.5 sm:py-4 bg-white text-black text-sm sm:text-base font-medium tracking-wider rounded-full transition-all relative z-10"
+          style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.1em"
+        >
+          CONTACT NOW
         </button>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <svg
+          class="w-6 h-6 text-white opacity-70"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </div>
     </section>
 
     <!-- Marci Metzger -->
-    <section id="listings" class="py-24 px-6 custom-bg text-center">
-      <div class="relative flex flex-col items-center space-y-8">
-        <h2 class="text-4xl text-white mb-6 font-['Cinzel']">MARCI METZGER</h2>
-        <img class="rounded-full h-25 w-25" src="images/default.jpg" alt="" />
-        <h3 class="text-white text-2xl font-['Calibri']">
+    <section 
+    id="listings" 
+    class="py-24 px-6 custom-bg text-center">
+      <div 
+      class="relative flex flex-col items-center space-y-8">
+        <h2 
+        class="text-4xl text-white mb-6 font-['Cinzel']">MARCI METZGER</h2>
+        <img 
+        class="rounded-full h-25 w-25" src="images/default.jpg" 
+        alt="" />
+        <h3 
+        class="text-white text-2xl font-['Calibri']">
           REALTOR FOR NEARLY 3 DECADES!
         </h3>
-        <h3 class="text-white text-2xl font-bold font-['Calibri']">
+        <h3 
+        class="text-white text-2xl font-bold font-['Calibri']">
           206-919-6886
         </h3>
       </div>
