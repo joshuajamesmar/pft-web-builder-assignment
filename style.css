@@ -1,63 +1,176 @@
-  /* General Styles */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Playfair Display', serif;
-  }
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
 
-  .text-shadow {
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  }
+body {
+  font-family: "Playfair Display", serif;
+}
 
-  .custom-font-size {
-    font-size: 16px;
-  }
-  
-  /* Custom Background Color */
-  .custom-bg {
-    background-color: #161616;
-  }
+.text-shadow {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
 
-  .custom-text-color {
-    color: #523b35;
-  }
-  
-  /* Parallax Section */
-  .parallax {
-    background-image: url('images/mtn-falls-pond.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.custom-font-size {
+  font-size: 16px;
+}
 
-  /* Dream Home Section */
-  .dreamhomebg {
-    background-image: url('images/dreamhome-bg.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* map css */
-  #map {
-    width: 100%;
-    height: 600px;
-  }
+/* Custom Background Color */
+.custom-bg {
+  background-color: #161616;
+}
 
-  /* Footer Icons */
-  .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-    transition: color 0.3s;
+.custom-text-color {
+  color: #523b35;
+}
+
+/* Parallax Section */
+.parallax {
+  background-image: url("images/mtn-falls-pond.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Dream Home Section */
+.dreamhomebg {
+  background-image: url("images/dreamhome-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* map css */
+#map {
+  width: 100%;
+  height: 600px;
+}
+
+/* Footer Icons */
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1da1f2; /* Twitter blue */
+}
+
+/* Carousel */
+.carousel-container {
+  perspective: 1000px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(2px);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+  z-index: 10;
+}
+
+.carousel-slide.prev,
+.carousel-slide.next {
+  opacity: 0.6;
+  transform: scale(0.9);
+  filter: blur(1px);
+}
+
+/* Mobile adjustments for side images */
+@media (max-width: 640px) {
+  .carousel-slide.prev,
+  .carousel-slide.next {
+    opacity: 0.3;
+    transform: scale(0.75);
+    filter: blur(2px);
   }
-  
-  .social-icons a:hover {
-    color: #1da1f2; /* Twitter blue */
+}
+
+.nav-button {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: scale(1.1);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.thumb-indicator {
+  transition: all 0.3s ease;
+}
+
+.thumb-indicator:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%) scale(0.85);
+    opacity: 0.4;
   }
-  
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%) scale(0.85);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent horizontal scroll on small devices */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure thumbnails don't cause overflow */
+#thumbnails::-webkit-scrollbar {
+  height: 4px;
+}
+
+#thumbnails::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+#thumbnails::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
