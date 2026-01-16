@@ -28,7 +28,6 @@
       id="sidebar"
       class="fixed top-0 left-0 h-full w-64 sm:w-72 md:w-80 bg-white shadow-2xl transform -translate-x-full z-[60]"
     >
-      <!-- Close Button -->
       <div class="flex justify-end p-4">
         <button
           onclick="toggleSidebar()"
@@ -38,7 +37,6 @@
           <i class="fas fa-times text-gray-600 text-xl"></i>
         </button>
       </div>
-
       <nav
         class="px-6 sm:px-8 md:px-10 py-8 sm:py-12 md:py-16 space-y-6 sm:space-y-8 font-['Roboto']"
       >
@@ -84,18 +82,16 @@
       <div
         class="flex items-center justify-between px-3 py-4 sm:px-4 sm:py-6 md:px-8 md:py-6"
       >
-        <!-- Menu Button -->
         <div class="flex-1 flex justify-start pl-2 sm:pl-4 md:pl-12 lg:pl-24">
           <div
             class="text-lg sm:text-xl md:text-2xl font-semibold cursor-pointer p-1.5 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onclick="toggleSidebar()"
           >
             <i
-              class="fas fa-bars h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 custom-text-color"
+              class="fas fa-bars h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 black"
             ></i>
           </div>
         </div>
-        <!-- Logo -->
         <div class="flex-shrink-0 flex justify-center items-center px-2">
           <img
             class="h-10 sm:h-12 md:h-20 lg:h-[127px] w-auto max-w-[150px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-[496px]"
@@ -103,15 +99,12 @@
             alt="Logo"
           />
         </div>
-        <!-- Spacer for alignment -->
         <div class="flex-1 flex justify-end pr-2 sm:pr-4 md:pr-12 opacity-0">
           <i
             class="fas fa-bars h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-black"
           ></i>
         </div>
       </div>
-
-      <!-- Sliding Diamond - Slides upward when scrolling -->
       <div
         id="diamond"
         class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 -z-10 opacity-100 w-7 h-7 sm:w-4 sm:h-4 md:w-11 md:h-11"
@@ -158,8 +151,6 @@
           CONTACT NOW
         </button>
       </div>
-
-      <!-- Scroll Indicator -->
       <div
         class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
@@ -179,70 +170,134 @@
       </div>
     </section>
 
-    <!-- Marci Metzger -->
-    <section id="listings" class="py-24 px-6 custom-bg text-center">
-      <div class="relative flex flex-col items-center space-y-8">
-        <h2 class="text-4xl text-white mb-6 font-['Cinzel']">MARCI METZGER</h2>
-        <img class="rounded-full h-25 w-25" src="images/default.jpg" alt="" />
-        <h3 class="text-white text-2xl font-['Calibri']">
-          REALTOR FOR NEARLY 3 DECADES!
-        </h3>
-        <h3 class="text-white text-2xl font-bold font-['Calibri']">
-          206-919-6886
-        </h3>
+    <!-- Marci Metzger Profile Section -->
+    <section class="custom-bg py-20 sm:py-24 md:py-28 text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col items-center space-y-8">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl text-white font-light tracking-wide"
+            style="font-family: 'Cinzel', serif"
+          >
+            Marci Metzger
+          </h2>
+          <div class="divider2 mb-6"></div>
+          <div class="relative">
+            <img
+              class="rounded-full h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 object-cover shadow-2xl ring-4 ring-white/20"
+              src="images/default.jpg"
+              alt="Marci Metzger"
+            />
+          </div>
+          <h3
+            class="text-xl sm:text-2xl text-white/90 font-light max-w-md"
+            style="font-family: 'Cormorant Garamond', serif"
+          >
+            Realtor for Nearly 3 Decades
+          </h3>
+          <a
+            href="tel:206-919-6886"
+            class="text-2xl sm:text-3xl text-white font-medium hover:text-white/80 transition-colors tracking-wide"
+            style="font-family: 'Montserrat', sans-serif"
+          >
+            206-919-6886
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- GET IT SOLD Section -->
-    <section class="text-center py-10 font-['Roboto'] mb-12">
-      <h2 class="text-4xl font-['Cinzel'] mb-10 px-4 mt-6">GET IT SOLD</h2>
-      <div class="space-y-16 px-4 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center text-left gap-6">
-          <img
-            src="./images/kitchen.jpg"
-            alt="Kitchen"
-            class="w-full md:w-1/2 rounded"
-          />
-          <div class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0">
-            <h4 class="text-2xl mb-6">Top Residential Sales Last 5 Years</h4>
-            <p class="text-lg">
+    <section class="py-16 sm:py-20 md:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 sm:mb-20">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl font-light mb-4"
+            style="font-family: 'Cinzel', serif"
+          >
+            Get It Sold
+          </h2>
+          <div class="decorative-line mx-auto text-gray-800"></div>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20 sm:mb-28"
+        >
+          <div class="overflow-hidden rounded-xl shadow-xl">
+            <img
+              src="./images/kitchen.jpg"
+              alt="Kitchen"
+              class="w-full h-full object-cover image-hover"
+            />
+          </div>
+          <div class="lg:pl-8">
+            <h3
+              class="text-2xl sm:text-3xl font-light mb-6 text-gray-900"
+              style="font-family: 'Cinzel', serif"
+            >
+              Top Residential Sales<br />Last 5 Years
+            </h3>
+            <p
+              class="text-lg sm:text-xl leading-relaxed text-gray-700"
+              style="font-family: 'Cormorant Garamond', serif"
+            >
               We helped nearly 90 clients in 2021, and closed 28.5 million in
-              sales! <br />
-              Our team works hard every day to grow and learn, so that we may
-              continue to excel in our market. Our clients deserve our best, &
-              we want to make sure our best is better every year.
+              sales! Our team works hard every day to grow and learn, so that we
+              may continue to excel in our market. Our clients deserve our best,
+              and we want to make sure our best is better every year.
             </p>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row items-center text-left gap-6">
-          <div
-            class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0 order-2 md:order-1"
-          >
-            <h4 class="text-2xl mb-6">Don't Just List It...</h4>
-            <p class="text-lg">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20 sm:mb-28"
+        >
+          <div class="lg:pr-8 order-2 lg:order-1">
+            <h3
+              class="text-2xl sm:text-3xl font-light mb-6 text-gray-900"
+              style="font-family: 'Cinzel', serif"
+            >
+              Don't Just List It...
+            </h3>
+            <p
+              class="text-lg sm:text-xl leading-relaxed text-gray-700"
+              style="font-family: 'Cormorant Garamond', serif"
+            >
               Get it SOLD! We exhaust every avenue to ensure our listings are at
               the fingertips of every possible buyer, getting you top dollar for
               your home.
             </p>
           </div>
-          <img
-            src="./images/poolhouse.jpg"
-            alt="Listing"
-            class="w-full md:w-1/2 rounded order-1 md:order-2"
-          />
+          <div class="overflow-hidden rounded-xl shadow-xl order-1 lg:order-2">
+            <img
+              src="./images/poolhouse.jpg"
+              alt="Poolhouse"
+              class="w-full h-full object-cover image-hover"
+            />
+          </div>
         </div>
-        <div class="flex flex-col md:flex-row items-center text-left gap-6">
-          <img
-            src="./images/key.jpg"
-            alt="Key"
-            class="w-full md:w-1/2 rounded"
-          />
-          <div class="p-5 flex-1 text-center md:text-left mt-8 md:mt-0">
-            <h4 class="text-2xl mb-6">Guide to Buyers</h4>
-            <p class="text-lg">
+
+        <!-- Feature 3 -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <div class="overflow-hidden rounded-xl shadow-xl">
+            <img
+              src="./images/key.jpg"
+              alt="Key"
+              class="w-full h-full object-cover image-hover"
+            />
+          </div>
+          <div class="lg:pl-8">
+            <h3
+              class="text-2xl sm:text-3xl font-light mb-6 text-gray-900"
+              style="font-family: 'Cinzel', serif"
+            >
+              Guide to Buyers
+            </h3>
+            <p
+              class="text-lg sm:text-xl leading-relaxed text-gray-700"
+              style="font-family: 'Cormorant Garamond', serif"
+            >
               Nobody knows the market like we do. Enjoy having a pro at your
               service. Market analysis, upgrades lists, contractors on speed
-              dial, & more!
+              dial, and more!
             </p>
           </div>
         </div>
@@ -250,86 +305,148 @@
     </section>
 
     <!-- Search Listings Section -->
-    <section class="bg-black bg-opacity-10 py-10 dreamhomebg">
-      <h3
-        class="text-center text-white text-4xl p-8 font-['Cinzel'] text-shadow"
-      >
-        FIND YOUR DREAM HOME
-      </h3>
-      <div class="max-w-7xl mx-auto mb-10 bg-white p-6 md:p-10 rounded shadow">
-        <h3 class="custom-text-color text-3xl mb-6 font-['Cinzel']">
-          SEARCH LISTING
-        </h3>
-        <div class="text-[#4b2e2e] font-['Roboto']">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm mb-6">
-            <div class="flex flex-col">
-              <label class="mb-1">Location</label>
-              <select class="border p-2 rounded">
-                <option disabled selected></option>
-              </select>
+    <section class="dreamhomebg py-16 sm:py-20 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 bg-black bg-opacity-20 rounded-2xl">
+          <h3
+            class="text-3xl sm:text-4xl md:text-5xl text-white font-light mb-4 shadow-lg"
+            style="font-family: 'Cinzel', serif"
+          >
+            Find Your Dream Home
+          </h3>
+          <div class="decorative-line mx-auto text-white"></div>
+        </div>
+        <div
+          class="bg-white/95 backdrop-blur-sm p-6 sm:p-8 md:p-10 rounded-2xl shadow-2xl"
+        >
+          <h4
+            class="text-2xl sm:text-3xl text-gray-800 mb-8 font-light"
+            style="font-family: 'Cinzel', serif"
+          >
+            Search Listings
+          </h4>
+          <div class="space-y-6">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+            >
+              <div class="flex flex-col">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Location</label
+                >
+                <select
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                >
+                  <option disabled selected>Select location</option>
+                </select>
+              </div>
+              <div class="flex flex-col">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Type</label
+                >
+                <select
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                >
+                  <option disabled selected>Select type</option>
+                </select>
+              </div>
+              <div class="flex flex-col">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Sort By</label
+                >
+                <select
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                >
+                  <option selected>Default</option>
+                  <option>Newest</option>
+                  <option>Oldest</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Bedrooms: Low to High</option>
+                  <option>Bedrooms: High to Low</option>
+                  <option>Bathrooms: Low to High</option>
+                  <option>Bathrooms: High to Low</option>
+                </select>
+              </div>
             </div>
-            <div class="flex flex-col">
-              <label class="mb-1">Type</label>
-              <select class="border p-2 rounded">
-                <option disabled selected></option>
-              </select>
-            </div>
-            <div class="flex flex-col">
-              <label class="mb-1">Sort By</label>
-              <select class="border p-2 rounded">
-                <option selected></option>
-                <option>Newest</option>
-                <option>Oldest</option>
-                <option>Least Expensive to Most</option>
-                <option>Most Expensive to Least</option>
-                <option>Bedrooms (Low to High)</option>
-                <option>Bedrooms (High to Low)</option>
-                <option>Bathrooms (Low to High)</option>
-                <option>Bathrooms (High to Low)</option>
-              </select>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 text-sm items-end">
-            <div class="flex flex-col md:col-span-2">
-              <label class="mb-1">Bedrooms</label>
-              <select class="border p-2 rounded">
-                <option selected>Any Number</option>
-                <option>Studio</option>
-                <option>+1</option>
-                <option>+2</option>
-                <option>+3</option>
-                <option>+4</option>
-                <option>+5</option>
-                <option>+6</option>
-              </select>
-            </div>
-            <div class="flex flex-col md:col-span-2">
-              <label class="mb-1">Baths</label>
-              <select class="border p-2 rounded">
-                <option selected>Any Number</option>
-                <option>+1</option>
-                <option>+2</option>
-                <option>+3</option>
-                <option>+4</option>
-                <option>+5</option>
-                <option>+6</option>
-              </select>
-            </div>
-            <div class="flex flex-col md:col-span-2">
-              <label class="mb-1">Min Price</label>
-              <input type="text" class="border p-2 rounded" />
-            </div>
-            <div class="flex flex-col md:col-span-2">
-              <label class="mb-1">Max Price</label>
-              <input type="text" class="border p-2 rounded" />
-            </div>
-            <div class="flex flex-col md:col-span-4">
-              <button
-                class="bg-gray-200 text-gray-500 px-4 py-2 rounded-full w-full mt-[22px] cursor-not-allowed"
-                disabled
-              >
-                SEARCH NOW
-              </button>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
+              <div class="flex flex-col col-span-2 sm:col-span-1 lg:col-span-1">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Bedrooms</label
+                >
+                <select
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                >
+                  <option selected>Any</option>
+                  <option>Studio</option>
+                  <option>1+</option>
+                  <option>2+</option>
+                  <option>3+</option>
+                  <option>4+</option>
+                  <option>5+</option>
+                </select>
+              </div>
+              <div class="flex flex-col col-span-2 sm:col-span-1 lg:col-span-1">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Baths</label
+                >
+                <select
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                >
+                  <option selected>Any</option>
+                  <option>1+</option>
+                  <option>2+</option>
+                  <option>3+</option>
+                  <option>4+</option>
+                  <option>5+</option>
+                </select>
+              </div>
+              <div class="flex flex-col col-span-2 sm:col-span-1 lg:col-span-1">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Min Price</label
+                >
+                <input
+                  type="text"
+                  placeholder="$0"
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                />
+              </div>
+              <div class="flex flex-col col-span-2 sm:col-span-1 lg:col-span-1">
+                <label
+                  class="text-sm font-medium text-gray-700 mb-2"
+                  style="font-family: 'Montserrat', sans-serif"
+                  >Max Price</label
+                >
+                <input
+                  type="text"
+                  placeholder="Any"
+                  class="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition"
+                />
+              </div>
+              <div class="flex flex-col col-span-4 sm:col-span-4 lg:col-span-2">
+                <label
+                  class="text-sm font-medium text-transparent mb-2 select-none"
+                  >Button</label
+                >
+                <button
+                  class="bg-gray-300 text-gray-500 px-6 py-3 rounded-lg w-full cursor-not-allowed font-medium tracking-wide"
+                  style="font-family: 'Montserrat', sans-serif"
+                  disabled
+                >
+                  SEARCH NOW
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -337,42 +454,43 @@
     </section>
 
     <!-- Company Logos -->
-    <section class="bg-white px-6 py-12 md:px-24 md:py-24 mx-auto">
-      <div
-        class="flex flex-wrap justify-center items-center gap-x-6 gap-y-6 sm:gap-x-10 md:gap-x-16"
-      >
-        <img
-          src="/images/company-logos/company1.jpg"
-          alt="Company 1"
-          class="h-16 md:h-24 object-contain"
-        />
-        <img
-          src="/images/company-logos/company2.jpg"
-          alt="Company 2"
-          class="h-16 md:h-24 object-contain"
-        />
-        <img
-          src="/images/company-logos/company3.jpg"
-          alt="Company 3"
-          class="h-16 md:h-24 object-contain"
-        />
-        <img
-          src="/images/company-logos/company4.jpg"
-          alt="Company 4"
-          class="h-16 md:h-24 object-contain"
-        />
+    <section class="bg-white py-12 sm:py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20"
+        >
+          <img
+            src="/images/company-logos/company1.jpg"
+            alt="Company 1"
+            class="h-12 sm:h-16 md:h-20 lg:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
+          <img
+            src="/images/company-logos/company2.jpg"
+            alt="Company 2"
+            class="h-12 sm:h-16 md:h-20 lg:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
+          <img
+            src="/images/company-logos/company3.jpg"
+            alt="Company 3"
+            class="h-12 sm:h-16 md:h-20 lg:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
+          <img
+            src="/images/company-logos/company4.jpg"
+            alt="Company 4"
+            class="h-12 sm:h-16 md:h-20 lg:h-24 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+          />
+        </div>
       </div>
     </section>
 
     <!-- Photo Gallery -->
-    <section class="bg-black py-8 sm:py-12 md:py-16 text-white">
+    <section class="custom-bg py-8 sm:py-12 md:py-16 text-white">
       <div class="max-w-7xl mx-auto px-2 sm:px-4">
         <h3
           class="text-center mb-6 sm:mb-8 md:mb-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif tracking-wide"
         >
           PHOTO GALLERY
         </h3>
-
         <!-- Carousel Container -->
         <div class="carousel-container relative overflow-hidden">
           <div
@@ -389,7 +507,6 @@
                 class="carousel-slide prev h-1/2 sm:h-2/3 md:h-3/4 w-auto object-cover rounded-md sm:rounded-lg shadow-xl sm:shadow-2xl"
               />
             </div>
-
             <!-- Main Image (Center) -->
             <div
               class="relative z-10 w-full max-w-[85%] sm:max-w-[90%] md:max-w-3xl lg:max-w-4xl px-2 sm:px-4"
@@ -401,7 +518,6 @@
                 class="carousel-slide active w-full h-auto object-cover rounded-lg sm:rounded-xl shadow-xl sm:shadow-2xl"
               />
             </div>
-
             <!-- Next Image (Right) -->
             <div
               class="absolute right-0 w-[15%] sm:w-1/4 h-full flex items-center justify-end pr-1 sm:pr-2 md:pr-4 pointer-events-none z-0"
@@ -414,7 +530,6 @@
               />
             </div>
           </div>
-
           <!-- Navigation Buttons -->
           <button
             id="prevBtn"
@@ -434,7 +549,6 @@
               />
             </svg>
           </button>
-
           <button
             id="nextBtn"
             class="nav-button absolute right-1 xs:right-2 sm:right-4 md:right-6 lg:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/80 text-black p-2 xs:p-2.5 sm:p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl"
@@ -454,7 +568,6 @@
             </svg>
           </button>
         </div>
-
         <!-- Thumbnail Indicators -->
         <div
           id="thumbnails"
@@ -500,151 +613,204 @@
     </section>
 
     <!-- Our Services -->
-    <section class="px-6 py-16">
-      <h3 class="text-center text-4xl mb-10 custom-text-color font-['Cinzel']">
-        OUR SERVICES
-      </h3>
-      <div
-        class="flex flex-col md:flex-row md:flex-wrap justify-center gap-10 font-['Roboto']"
-      >
-        <div class="text-center w-full md:w-1/3 max-w-xs mx-auto">
-          <img
-            src="/images/services/services1.jpg"
-            class="rounded-full mx-auto mb-4 w-50 h-50 object-cover"
-          />
-          <h4 class="text-2xl py-4">Real Estate Done Right</h4>
-          <p class="text-lg">
-            Worried about your property decisions? Don't be. We ensure you get
-            the best experience possible!
-          </p>
-        </div>
-        <div class="text-center w-full md:w-1/3 max-w-xs mx-auto">
-          <img
-            src="/images/services/services2.jpg"
-            class="rounded-full mx-auto mb-4 w-50 h-50 object-cover"
-          />
-          <h4 class="text-2xl py-4">Commercial & Residential</h4>
-          <p class="text-lg">
-            Large or small, condo or mansion, we can find it and get it for you
-            at the price that's right.
-          </p>
-        </div>
-        <div class="text-center w-full md:w-1/3 max-w-xs mx-auto">
-          <img
-            src="/images/services/services3.jpg"
-            class="rounded-full mx-auto mb-4 w-50 h-50 object-cover"
-          />
-          <h4 class="text-2xl py-4">Rely on Expertise</h4>
-          <p class="text-lg">
-            If you have questions about affordability, credit, or legal matters,
-            trust us to help you feel confident.
-          </p>
+    <section class="px-6 md:px-12 lg:px-20 py-20">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-center text-3xl md:text-4xl font-['Cinzel'] custom-text-color mb-16 tracking-widest font-light"
+        >
+          OUR SERVICES
+        </h2>
+        <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+          <div class="service-card group">
+            <div class="overflow-hidden rounded-lg mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=400&fit=crop"
+                alt="Real Estate Done Right"
+                class="service-image w-full h-64 object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-['Roboto'] font-medium text-gray-900 mb-4">
+              Real Estate Done Right
+            </h3>
+            <p class="text-gray-600 font-['Roboto'] font-light leading-relaxed">
+              Worried about your property decisions? We ensure you get the best
+              experience possible with expert guidance every step of the way.
+            </p>
+          </div>
+          <div class="service-card group">
+            <div class="overflow-hidden rounded-lg mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=400&h=400&fit=crop"
+                alt="Commercial & Residential"
+                class="service-image w-full h-64 object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-['Roboto'] font-medium text-gray-900 mb-4">
+              Commercial & Residential
+            </h3>
+            <p class="text-gray-600 font-['Roboto'] font-light leading-relaxed">
+              Large or small, condo or mansion—we can find it and get it for you
+              at the price that's right.
+            </p>
+          </div>
+          <div class="service-card group">
+            <div class="overflow-hidden rounded-lg mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=400&fit=crop"
+                alt="Expert Guidance"
+                class="service-image w-full h-64 object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-['Roboto'] font-medium text-gray-900 mb-4">
+              Expert Guidance
+            </h3>
+            <p class="text-gray-600 font-['Roboto'] font-light leading-relaxed">
+              Questions about affordability, credit, or legal matters? Trust our
+              expertise to help you feel confident in your decisions.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-
+    <div class="divider3 mb-6"></div>
     <!-- Contact Section -->
-    <section class="bg-white px-4 sm:px-6 md:px-20 py-20 mb-20">
-      <h3
-        class="text-center text-2xl md:text-3xl font-['Cinzel'] custom-text-color mb-16 tracking-wide"
-      >
-        CALL OR VISIT
-      </h3>
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start font-['Roboto']"
-      >
-        <form class="space-y-6 w-full">
-          <h4 class="text-xl font-semibold mb-2">Send Message</h4>
-          <input
-            type="text"
-            placeholder="Name"
-            class="border-b w-full p-4 focus:outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Email*"
-            class="border-b w-full p-4 focus:outline-none"
-          />
-          <textarea
-            placeholder="Message"
-            rows="4"
-            class="border-b w-full p-4 focus:outline-none"
-          ></textarea>
-
-          <div class="flex justify-center">
-            <button
-              type="submit"
-              class="bg-gray-200 text-black text-sm font-semibold py-5 px-6 rounded-full w-32 hover:bg-gray-300"
-            >
-              SEND
-            </button>
+    <section class="bg-white px-6 md:px-12 lg:px-20 py-16 md:py-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Title -->
+        <h2
+          class="text-center text-3xl md:text-4xl font-['Cinzel'] custom-text-color mb-12 md:mb-16 tracking-widest font-light"
+        >
+          GET IN TOUCH
+        </h2>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Contact Form -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-['Roboto'] font-light text-gray-800 mb-8">
+              Send a Message
+            </h3>
+            <form class="space-y-8">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  class="w-full border-b-2 border-gray-200 pb-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors font-['Roboto']"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  required
+                  class="w-full border-b-2 border-gray-200 pb-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors font-['Roboto']"
+                />
+              </div>
+              <div>
+                <textarea
+                  placeholder="Your Message"
+                  rows="4"
+                  required
+                  class="w-full border-b-2 border-gray-200 pb-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors resize-none font-['Roboto']"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full md:w-auto bg-gray-800 text-white font-['Roboto'] font-medium py-4 px-12 hover:bg-gray-700 transition-colors duration-300"
+              >
+                SEND MESSAGE
+              </button>
+              <p class="text-xs text-gray-400 font-['Roboto']">
+                Protected by reCAPTCHA · Privacy Policy · Terms of Service
+              </p>
+            </form>
           </div>
 
-          <p class="text-xs text-gray-500">
-            This site is protected by reCAPTCHA and the Google Privacy Policy
-            and Terms of Service apply.
-          </p>
-        </form>
-        <div class="space-y-6 text-sm md:text-base w-full">
-          <div class="flex justify-center md:justify-start">
-            <a
-              href="https://web.whatsapp.com/"
-              target="_blank"
-              class="inline-flex items-center gap-2 bg-[#3c4f51] font-bold text-white px-8 py-4 rounded-full hover:bg-[#2c3b3d] w-fit"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp"
-                class="w-6 h-6"
-              />
-              Message us on WhatsApp
-            </a>
-          </div>
-          <div class="p-2">
-            <p class="text-xl">Marci Metzger - THE RIDGE REALTY GROUP</p>
-            <p class="mt-6 mb-6">
-              3190 HW-160, Suite F, Pahrump, Nevada 89048, United States
-            </p>
-            <p class="custom-text-color text-base">(206) 919-6886</p>
-          </div>
-          <div class="p-2">
-            <p class="text-xl">Office Hours</p>
-            <div
-              class="flex items-center justify-between cursor-pointer mt-6"
-              onclick="toggleHours()"
-            >
-              <p class="flex items-center gap-2">
-                Open today
-                <span class="font-medium inline-flex items-center gap-1">
-                  08:00 a.m. – 07:00 p.m.
-                  <span
-                    id="arrow"
-                    class="text-lg transition-transform duration-300"
-                    >&#9654;</span
-                  >
-                </span>
+          <!-- Contact Information -->
+          <div class="space-y-10 font-['Roboto']">
+            <div>
+              <a
+                href="https://wa.me/12069196886"
+                target="_blank"
+                class="inline-flex items-center gap-3 bg-[#25D366] text-white font-medium px-8 py-4 hover:bg-[#20BA5A] transition-colors duration-300 w-full md:w-auto justify-center"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+                Message on WhatsApp
+              </a>
+            </div>
+
+            <!-- Office Information -->
+            <div class="space-y-4 text-gray-700">
+              <h4 class="text-xl font-medium text-gray-900">Marci Metzger</h4>
+              <p class="text-sm font-light text-gray-500">
+                THE RIDGE REALTY GROUP
+              </p>
+              <p class="text-sm leading-relaxed">
+                3190 HW-160, Suite F<br />
+                Pahrump, Nevada 89048
+              </p>
+              <p class="custom-text-color text-lg font-medium">
+                (206) 919-6886
               </p>
             </div>
-            <ul id="officeHours" class="space-y-1 hidden">
-              <li>Mon <span>08:00 a.m. – 07:00 p.m.</span></li>
-              <li>Tue <span>08:00 a.m. – 07:00 p.m.</span></li>
-              <li>Wed <span>08:00 a.m. – 07:00 p.m.</span></li>
-              <li>Thu <span>08:00 a.m. – 07:00 p.m.</span></li>
-              <li>
-                <strong>Fri</strong>
-                <span class="font-bold">08:00 a.m. – 07:00 p.m.</span>
-              </li>
-              <li>Sat <span>08:00 a.m. – 07:00 p.m.</span></li>
-              <li>Sun <span>08:00 a.m. – 07:00 p.m.</span></li>
-            </ul>
-            <p class="mt-6">
-              Open daily
-              <span class="font-medium ml-5">08:00 a.m. – 07:00 p.m.</span>
-            </p>
-            <p class="mt-8 text-sm">
-              Appointments outside office hours available upon request. Just
-              call!
-            </p>
+
+            <!-- Office Hours -->
+            <div class="space-y-4">
+              <h4 class="text-xl font-medium text-gray-900">Office Hours</h4>
+              <div class="cursor-pointer group" onclick="toggleHours()">
+                <div class="flex items-center justify-between text-gray-700">
+                  <span class="text-sm">Open Today</span>
+                  <div class="flex items-center gap-2">
+                    <span class="font-medium">8:00 AM – 7:00 PM</span>
+                    <svg
+                      id="arrow"
+                      class="w-4 h-4 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <ul id="officeHours" class="space-y-2 text-sm text-gray-600">
+                <li class="flex justify-between">
+                  <span>Monday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Tuesday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Wednesday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Thursday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between font-medium text-gray-800">
+                  <span>Friday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Saturday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+                <li class="flex justify-between">
+                  <span>Sunday</span><span>8:00 AM – 7:00 PM</span>
+                </li>
+              </ul>
+
+              <p class="text-xs text-gray-500 italic pt-4">
+                Appointments outside office hours available upon request
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -653,15 +819,8 @@
     <!-- Maps Section -->
     <div id="map" class="shadow-lg"></div>
 
-    <!-- Decorative Triangle Merged into Footer -->
-    <div class="relative w-full">
-      <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 z-40">
-        <div class="w-9 h-9 bg-black rotate-45"></div>
-      </div>
-    </div>
-
     <!-- Footer -->
-    <footer class="bg-black text-white text-center py-4">
+    <footer class="custom-bg text-white text-center py-4">
       <div class="flex justify-center space-x-6 p-9">
         <a href="https://www.facebook.com" target="_blank"
           ><i class="fab fa-facebook"></i

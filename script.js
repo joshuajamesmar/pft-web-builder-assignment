@@ -1,85 +1,87 @@
 // Sidebar toggle functionality
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const overlay = document.getElementById('overlay');
-      const isOpen = !sidebar.classList.contains('-translate-x-full');
-      
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const isOpen = !sidebar.classList.contains("-translate-x-full");
+
+  if (isOpen) {
+    // Close sidebar
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("opacity-0", "pointer-events-none");
+    overlay.classList.remove("opacity-50");
+  } else {
+    // Open sidebar
+    sidebar.classList.remove("-translate-x-full");
+    overlay.classList.remove("opacity-0", "pointer-events-none");
+    overlay.classList.add("opacity-50");
+  }
+}
+
+// Scroll detection for diamond animation
+let isScrolled = false;
+
+function handleScroll() {
+  const scrollPosition = window.scrollY;
+  const diamond = document.getElementById("diamond");
+  const navbar = document.getElementById("navbar");
+
+  if (scrollPosition > 50 && !isScrolled) {
+    // Scrolled down - slide diamond upward into navbar
+    isScrolled = true;
+    diamond.style.transform = "translateX(-50%) translateY(-20%)";
+    navbar.classList.add("shadow-lg");
+    navbar.classList.remove("shadow-md");
+  } else if (scrollPosition <= 50 && isScrolled) {
+    // Scrolled to top - return diamond to original position
+    isScrolled = false;
+    diamond.style.transform = "translateX(-50%) translateY(50%)";
+    navbar.classList.remove("shadow-lg");
+    navbar.classList.add("shadow-md");
+  }
+}
+
+// Throttle scroll event for better performance
+let scrollTimeout;
+window.addEventListener("scroll", function () {
+  if (scrollTimeout) {
+    window.cancelAnimationFrame(scrollTimeout);
+  }
+  scrollTimeout = window.requestAnimationFrame(function () {
+    handleScroll();
+  });
+});
+
+// Close sidebar when clicking on nav links
+document.querySelectorAll("#sidebar a").forEach((link) => {
+  link.addEventListener("click", function () {
+    toggleSidebar();
+  });
+});
+
+// Prevent body scroll when sidebar is open
+const sidebar = document.getElementById("sidebar");
+const observer = new MutationObserver(function (mutations) {
+  mutations.forEach(function (mutation) {
+    if (mutation.attributeName === "class") {
+      const isOpen = !sidebar.classList.contains("-translate-x-full");
       if (isOpen) {
-        // Close sidebar
-        sidebar.classList.add('-translate-x-full');
-        overlay.classList.add('opacity-0', 'pointer-events-none');
-        overlay.classList.remove('opacity-50');
+        document.body.style.overflow = "hidden";
       } else {
-        // Open sidebar
-        sidebar.classList.remove('-translate-x-full');
-        overlay.classList.remove('opacity-0', 'pointer-events-none');
-        overlay.classList.add('opacity-50');
+        document.body.style.overflow = "";
       }
     }
-
-    // Scroll detection for diamond animation
-    let isScrolled = false;
-    
-    function handleScroll() {
-      const scrollPosition = window.scrollY;
-      const diamond = document.getElementById('diamond');
-      const navbar = document.getElementById('navbar');
-      
-      if (scrollPosition > 50 && !isScrolled) {
-        // Scrolled down - slide diamond upward into navbar
-        isScrolled = true;
-        diamond.style.transform = 'translateX(-50%) translateY(-20%)';
-        navbar.classList.add('shadow-lg');
-        navbar.classList.remove('shadow-md');
-      } else if (scrollPosition <= 50 && isScrolled) {
-        // Scrolled to top - return diamond to original position
-        isScrolled = false;
-        diamond.style.transform = 'translateX(-50%) translateY(50%)';
-        navbar.classList.remove('shadow-lg');
-        navbar.classList.add('shadow-md');
-      }
-    }
-
-    // Throttle scroll event for better performance
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-      if (scrollTimeout) {
-        window.cancelAnimationFrame(scrollTimeout);
-      }
-      scrollTimeout = window.requestAnimationFrame(function() {
-        handleScroll();
-      });
-    });
-
-    // Close sidebar when clicking on nav links
-    document.querySelectorAll('#sidebar a').forEach(link => {
-      link.addEventListener('click', function() {
-        toggleSidebar();
-      });
-    });
-
-    // Prevent body scroll when sidebar is open
-    const sidebar = document.getElementById('sidebar');
-    const observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutation) {
-        if (mutation.attributeName === 'class') {
-          const isOpen = !sidebar.classList.contains('-translate-x-full');
-          if (isOpen) {
-            document.body.style.overflow = 'hidden';
-          } else {
-            document.body.style.overflow = '';
-          }
-        }
-      });
-    });
-
+  });
+});
 
 // Opening Hours
 function toggleHours() {
-  const list = document.getElementById("officeHours");
+  const hours = document.getElementById("officeHours");
   const arrow = document.getElementById("arrow");
-  list.classList.toggle("hidden");
-  arrow.classList.toggle("rotate-90");
+
+  hours.classList.toggle("show");
+  arrow.style.transform = hours.classList.contains("show")
+    ? "rotate(90deg)"
+    : "rotate(0deg)";
 }
 
 // Google Maps API
